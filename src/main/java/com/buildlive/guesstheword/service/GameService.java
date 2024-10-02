@@ -25,10 +25,11 @@ public class GameService {
 
         String ret = "";
         for (char c : allCharactersOfTheWord){
-//            if (c == null){
-//
-//            }
+            if (c == '\u0000'){
+                ret = ret + "_";
+            }
+            ret = ret + " ";
         }
-        return ret;
+        return  ret;
     }
 }
